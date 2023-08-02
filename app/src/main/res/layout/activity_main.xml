@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWelCome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNum1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_style"
+            android:hint="@string/first_number"
+            android:inputType="numberSigned"
+            android:padding="16dp"
+            android:maxLength="3"
+            android:layout_marginTop="26dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <requestFocus />
+
+        <RadioGroup
+            android:id="@+id/operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAdd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/plus"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbSub"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/sub"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbMul"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+
+                android:layout_marginTop="26dp"
+                android:text="@string/mul"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbDiv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/div"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etNum2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_style"
+            android:hint="@string/second_number"
+            android:inputType="numberSigned"
+            android:padding="16dp"
+            android:maxLength="3"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/textview"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCalculate"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/signin_up_button"
+            android:padding="10dp"
+            android:text="@string/calculate"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>

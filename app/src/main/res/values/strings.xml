@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NDKDemoExample</string>
+    <string name="first_number">First Number</string>
+    <string name="plus">+</string>
+    <string name="sub">-</string>
+    <string name="mul">X</string>
+    <string name="div">/</string>
+    <string name="second_number">Second Number</string>
+    <string name="calculate">Calculate</string>
+    <string name="textview">TextView</string>
+    <string name="increment">Up</string>
+    <string name="down">Down</string>
+    <string name="jni_callback">JNI CallBack</string>
+    <string name="ndk_calculator">NDK Calculator</string>
+</resources>
