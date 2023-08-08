@@ -44,7 +44,7 @@ class JNICallBackScreen:AppCompatActivity(),JNIListener
 
     companion object {
         init {
-            System.loadLibrary("ndkdemoexample")
+            System.loadLibrary("calculator-lib")
         }
     }
 

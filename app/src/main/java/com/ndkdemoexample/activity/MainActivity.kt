@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         init {
-            System.loadLibrary("ndkdemoexample")
+            System.loadLibrary("calculator-lib")
         }
     }
 

@@ -6,6 +6,14 @@ plugins {
 android {
     namespace 'com.ndkdemoexample'
     compileSdk 33
+    ndkVersion = "25.2.9519653"
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jnilibs']
+        }
+        //Another code
+    }
 
     defaultConfig {
         applicationId "com.ndkdemoexample"
@@ -13,21 +21,27 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags '-std=c++11'
+                cppFlags ""
             }
         }
-    }
 
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+   /* externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }*/
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,24 +50,18 @@ android {
         jvmTarget = '1.8'
     }
 
-    ndkVersion = "25.2.9519653"
-    externalNativeBuild {
-        cmake {
-            path file('src/main/cpp/CMakeLists.txt')
-            version '3.22.1'
-        }
-    }
-
     buildFeatures {
         viewBinding true
     }
-
 
 }
 
 dependencies {
 
     //noinspection GradleCompatible
+     //implementation fileTree(dir: "$buildDir/calculator-lib", include: 'calculator-lib.jar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.13.2'
